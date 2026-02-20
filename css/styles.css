@@ -1,0 +1,187 @@
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap');
+
+/* ===== Theme Variables ===== */
+:root {
+    --primary-green: #4CAF50;
+    --tomato-red: #E53935;
+    --cream-bg: #FFF8E1;
+    --charcoal: #333333;
+    --light-gray: #f7f7f7;
+    --white: #ffffff;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #FFF8E1 0%, #ffffff 100%);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+/* ===== Main Container ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px 20px;
+}
+
+/* ===================================== */
+/* ============ NAVIGATION ============= */
+/* ===================================== */
+
+.nav-bar {
+    background-color: var(--white);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.navigation-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-links li {
+    font-weight: 500;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: var(--charcoal);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navigation-links a:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.homepage a {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+/* ===================================== */
+/* ============ RECIPE LAYOUT ========== */
+/* ===================================== */
+
+.recipe-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Basic Info Section */
+.recipe-basic-info {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.recipe-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 14px;
+    margin: 15px 0 25px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-green);
+    border-left: 5px solid var(--primary-green);
+    padding-left: 10px;
+}
+
+/* Ingredients & Steps Cards */
+.ingredients,
+.steps {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Lists */
+.ingredients-list,
+.steps ol {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.ingredients-list li,
+.steps li {
+    margin-bottom: 10px;
+}
+
+/* ===================================== */
+/* ============== FOOTER =============== */
+/* ===================================== */
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-description {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-source-text {
+    font-weight: 500;
+}
+
+.footer-source-link {
+    text-decoration: none;
+    color: var(--primary-green);
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.footer-source-link:hover {
+    color: var(--tomato-red);
+}
+
+/* ===================================== */
+/* ============ RESPONSIVE ============= */
+/* ===================================== */
+
+@media (max-width: 900px) {
+    .recipe-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-bar {
+        text-align: center;
+    }
+}
